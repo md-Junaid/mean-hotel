@@ -6,7 +6,7 @@ var express 	= require('express'),
 	routes		= require('./api/routes'),
 	mongoose	= require('mongoose');
 
-app.set('port', 3000);
+app.set('port', 3001);
 
 app.use(function(req, res, next) {
 	console.log(req.method, req.url);
@@ -14,8 +14,10 @@ app.use(function(req, res, next) {
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use('/api', routes);
 

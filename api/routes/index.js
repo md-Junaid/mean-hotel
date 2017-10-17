@@ -2,6 +2,7 @@ var express = require('express'),
 	router	= express.Router(),
 	ctrlHotels = require('../controllers/hotels.controllers.js');
 	ctrlReviews = require('../controllers/reviews.controllers.js');
+	ctrlUsers = require('../controllers/users.controllers.js');
 
 router
 	.route('/hotels')
@@ -26,4 +27,13 @@ router
 	.put(ctrlReviews.reviewsUpdateOne)
 	.delete(ctrlReviews.reviewsDeleteOne);
 
-	module.exports = router;
+//Authentication
+router
+	.route('/users/register')
+	.post(ctrlUsers.register);
+
+router
+	.route('/users/login')
+	.post(ctrlUsers.login);
+
+module.exports = router;

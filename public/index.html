@@ -1,16 +1,21 @@
-<html>
+<html ng-app="meanhotel">
 <head>
 	<title>MEAN hotel</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 <body>
-	<h1>MEAN hotel homepage</h1>
+	<mh-navigation></mh-navigation>
+	<div class="container">
+		<div ng-view></div>
+	</div>
+	<p>&nbsp</p>
+	<p>&nbsp</p>
 
 	<footer class="footer">
 		<div class="container">
 			<p class="text-muted text-center">
-				<a href="http://fullstacktraining.com" target="_blank"><img src="/images/FST_logo.png" height="26" alt="Full Stack Training"/></a>
+				<a href="#!/" target="_blank"><img src="/images/FST_logo.png" height="26" alt="Full Stack Training"/></a>
 			</p>
 
 			<p class="text-muted text-center">
@@ -20,5 +25,18 @@
 	</footer>
 
 	<script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-route/angular-route.js"></script>
+	<script src="node_modules/angular-jwt/dist/angular-jwt.js"></script>
+	<script src="angular-app/app.js"></script>
+	<script src="angular-app/hotel-list/hotel-list-controller.js"></script>
+	<script src="angular-app/hotel-display/hotel-display-controller.js"></script>
+	<script src="angular-app/hotel-data-factory/hotel-data-factory.js"></script>
+	<script src="angular-app/hotel-rating/hotel-rating-directive.js"></script>
+	<script src="angular-app/register/register-controller.js"></script>
+	<script src="angular-app/login/login-controller.js"></script>
+	<script src="angular-app/navigation-directive/navigation-directive.js"></script>
+	<script src="angular-app/auth/auth-factory.js"></script>
+	<script src="angular-app/auth/auth-interceptor.js"></script>
 </body>
 </html>

@@ -19,12 +19,15 @@ body {
 	background-color: #f5f5f5;
 	padding-top: 20px;
 }
+body > .container {
+	padding-top: 60px;
+}
 
-#svg_8 {
+/*#svg_8 {
 	transition: all 5.3s;
 }
 
 svg:hover #svg_8 {
 	fill: blue;
 	transform: scale(.9);
-}
+}*/

@@ -32,3 +32,4 @@ process.once('SIGUSR2', function() {
 
 //Bring in Schemas and models
 require('./hotels.model.js');
+require('./users.model.js');
